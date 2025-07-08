@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Vetor {
 
     private String[] elementos;
@@ -6,6 +8,10 @@ public class Vetor {
     public Vetor(int capacidade){
         this.elementos = new String[capacidade];
         this.tamanho = 0;
+    }
+
+    public int getTamanho(){
+        return tamanho;
     }
 
     /*public void adiciona(String elemento){
@@ -33,5 +39,20 @@ public class Vetor {
             return  true;
         }
         return false;
+    }
+
+    public String toString(){
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        for (int i = 0; i<tamanho-1; i++){
+            s.append(elementos[i]);
+            s.append(", ");
+        }
+        if(tamanho > 0){
+            s.append(elementos[tamanho-1]);
+        }
+        s.append("]");
+
+        return s.toString();
     }
 }

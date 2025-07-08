@@ -4,5 +4,7 @@ public class Main {
 
         vetor.adiciona("primeiro");
         vetor.adiciona("segundo");
+        int tamanho = vetor.getTamanho();
+        System.out.println(vetor);
     }
 }
