@@ -6,6 +6,7 @@ public class Main {
         vetor.adiciona("segundo");
         int tamanho = vetor.getTamanho();
         System.out.println(vetor.busca(0));
-        System.out.println(vetor.busca(15));
+        System.out.println(vetor.busca(1));
+        System.out.println(vetor.busca("primeiro"));
     }
 }

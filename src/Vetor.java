@@ -48,6 +48,15 @@ public class Vetor {
         return elementos[posicao];
     }
 
+    public int busca(String elemento){
+        for(int i=0; i<tamanho; i++){
+            if(elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public String toString(){
         StringBuilder s = new StringBuilder();
         s.append("[");
