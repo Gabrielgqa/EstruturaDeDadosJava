@@ -8,5 +8,7 @@ public class Main {
         System.out.println(vetor.busca(0));
         System.out.println(vetor.busca(1));
         System.out.println(vetor.busca("primeiro"));
+        System.out.println(vetor.adiciona("primeirissimo", 0));
+        System.out.println(vetor);
     }
 }

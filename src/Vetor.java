@@ -41,6 +41,23 @@ public class Vetor {
         return false;
     }
 
+    public boolean adiciona(String elemento, int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+
+        for(int i=tamanho; i>=posicao; i--){
+            if(i == posicao){
+                elementos[posicao] = elemento;
+                tamanho++;
+                return true;
+            } else {
+                elementos[i] = elementos[i-1];
+            }
+        }
+        return false;
+    }
+
     public String busca(int posicao){
         if(!(posicao >= 0 && posicao < tamanho)){
              throw new IllegalArgumentException("Posição inválida");
