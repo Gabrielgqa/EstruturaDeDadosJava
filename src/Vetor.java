@@ -85,6 +85,16 @@ public class Vetor {
         return -1;
     }
 
+    public void remove(int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        for (int i = posicao; i < tamanho-1; i++){
+            elementos[i] = elementos[i+1];
+        }
+        tamanho--;
+    }
+
     public String toString(){
         StringBuilder s = new StringBuilder();
         s.append("[");
